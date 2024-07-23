@@ -66,11 +66,13 @@ int	print_string(va_list ap)
 
 	if (s == NULL)
 	{
-		_putchar('N');
-		_putchar('U');
-		_putchar('L');
-		_putchar('L');
-		return (4);
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+		return (6);
 	}
 	while (*s)
 	{
