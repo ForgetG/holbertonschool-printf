@@ -1,16 +1,48 @@
 #include "main.h"
 
 /**
+ * process_specifier - processes the format
+ * specifier and prints the corresponding argument
+ *
+ * @p: Pointer to the format string
+ * @ap: a list of arguments pointing to the values to be printed
+ * @specifiers: Array og specifier_t structs
+ * containing the specifiers and their corresponding print functions
+ *
+ * Return: the total_number of caracters printed
+ */
+
+int	process_specifier(const char **p, va_list ap, specifier_t *specifiers)
+{
+	int index = 0, found = 0, total_count = 0;
+
+	while (specifiers[index].specifier != '\0')
+	{
+		if (**p == specifiers[index].specifier)
+		{
+			total_count += specifiers[index].print_func(ap);
+			found = 1;
+			break;
+		}
+		index++;
+	}
+	if (!found)
+	{
+		_putchar('%');
+		_putchar(**p);
+		total_count += 2;
+	}
+	return (total_count);
+}
+
+/**
  * _printf - a function that produces output according to a format
  * @format: a list of types of arguments passed to the function
- * @...: a variable number of strings parameters
- * Return: length of strings parameters
+ * Return: the total_count - number of caracters printed
  */
 
 int _printf(const char *format, ...)
-
 {
-
 	specifier_t specifiers[] = {
 		{'d', print_int},
 		{'i', print_int},
@@ -18,28 +50,23 @@ int _printf(const char *format, ...)
 		{'s', print_string},
 		{'\0', NULL}
 	};
-
 	int total_count = 0;
 	const char *p = format;
 	va_list ap;
 
 	va_start(ap, format);
-
 	while (*p != '\0')
 	{
 		if (*p == '%')
 		{
 			p++;
-
 			if (*p == '%')
 			{
 				_putchar('%');
 				total_count++;
 			}
 			else
-			{
 				total_count += process_specifier(&p, ap, specifiers);
-			}
 		}
 		else
 		{

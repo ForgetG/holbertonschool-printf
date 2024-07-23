@@ -9,12 +9,12 @@
  * @specifier: a character string
  * @print_func: function to use for printing
  */
-typedef struct format_specifier
+typedef struct format_specifier 
 {
 	char specifier;
 	int (*print_func)(va_list ap);
 
-} specifier_t;
+} specifier_t;format_specifier
 
 
 int _putchar(char c);
