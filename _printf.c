@@ -62,7 +62,7 @@ int	_printf(const char *format, ...)
 			p++;
 			if (*p == '\0')
 			{
-				break;
+				return (-1);
 			}
 			else if (*p == '%')
 			{
@@ -77,7 +77,7 @@ int	_printf(const char *format, ...)
 			_putchar(*p);
 			total_count++;
 		}
-		*p++;
+		p++;
 	}
 	va_end(ap);
 	return (total_count);
