@@ -64,6 +64,14 @@ int	print_string(va_list ap)
 	int	count = 0;
 	char	*s = va_arg(ap, char *);
 
+	if (s == NULL)
+	{
+		_putchar('N');
+		_putchar('U');
+		_putchar('L');
+		_putchar('L');
+		return (4);
+	}
 	while (*s)
 	{
 		_putchar(*s++);
