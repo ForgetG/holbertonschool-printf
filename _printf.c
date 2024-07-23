@@ -77,7 +77,7 @@ int	_printf(const char *format, ...)
 			_putchar(*p);
 			total_count++;
 		}
-		p++;
+		*p++;
 	}
 	va_end(ap);
 	return (total_count);
