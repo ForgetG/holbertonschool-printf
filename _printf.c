@@ -60,7 +60,13 @@ int	_printf(const char *format, ...)
 		if (*p == '%')
 		{
 			p++;
-			if (*p == '%')
+			if (*p == '\0')
+			{
+				_putchar('%');
+				total_count++;
+				break;
+			}
+			else if (*p == '%')
 			{
 				_putchar('%');
 				total_count++;
