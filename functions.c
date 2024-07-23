@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_int - prints an integer
+ * @ap: argument list containing the integer to print
+ * Return: number of character printed
+ */
+
 int	print_int(va_list ap)
 {
 	int	num = va_arg(ap, int);
@@ -33,6 +39,12 @@ int	print_int(va_list ap)
 	return (count);
 }
 
+/**
+ * print_char - prints a character
+ * @ap: argument list containing the character to print
+ * Return: 1
+ */
+
 int	print_char(va_list ap)
 {
 	char	c = (char)va_arg(ap, int);
@@ -40,6 +52,12 @@ int	print_char(va_list ap)
 	_putchar(c);
 	return (1);
 }
+
+/**
+ * print_string - prints a string
+ * @ap: argument list containing the string to print
+ * Return: number of character printed
+ */
 
 int	print_string(va_list ap)
 {
