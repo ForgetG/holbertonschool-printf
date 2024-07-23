@@ -62,7 +62,6 @@ int	_printf(const char *format, ...)
 			p++;
 			if (*p == '\0')
 			{
-				_putchar('%');
 				break;
 			}
 			else if (*p == '%')
