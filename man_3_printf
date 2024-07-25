@@ -1,8 +1,8 @@
-.TH man_3_printf
+.TH man_3_printf "25 JULY 2024" "Version1.0" "_printf man page"
 .SH NAME
 _printf - Display function formatted in the manner of the standard printf function of the C language.
 .SH SYNOPSIS
-#include <stdarg.h>
+#include "main.h"
 int _printf(const char *format, ...);
 .SH DESCRIPTION
 The _printf function allows formatted text to be displayed on the screen. It uses a format string consisting of regular characters and conversion specifiers to insert values into the displayed text.
@@ -17,20 +17,29 @@ s	Characters from the array are written up to (but not included) a terminating n
 .SH RETURN VALUE
 The _printf function returns the total number of characters written (not includiing the final null character) if the operation was successful. If there is an error, it returns -1.
 .SH ATTRIBUTES
-|-------------------------------------------------------|
-| Interface	| Attribute	| Value			|
-|---------------|---------------|-----------------------|
-| _printf()	| Thread safety	| MT-Safe locale	|
-|-------------------------------------------------------|
+.TS
+allbox,center,tab(|);
+cB|cB|cB
+cB|cB|cB
+l|l|l.
+Interface	| Attribute	| Value
+_printf()	| Thread Safety	| MT-Safe locale
+.TE
 .SH STANDARDS
 _printf()
 	C89, POSIX.1-2001.
 .SH BUGS
 Flag characters, field width, precision and length modifier are not taken into account.
 .SH EXAMPLES
-#include "main.h"
 _printf("My name is %s and i'm %d years old.\n", "Marc", 35);
+
 // Displays "My name is Marc and i'm 35 years old." followed by a newline.
-#include "main.h"
+
+
 _printf("That string is empty:%s, it's length is: %i.\n", "", 0);
+
 // Displays "that string is empty:, it's length is 0." followed by a newline.
+
+.SH AUTHORS
+Keiko Bisou
+Guillaume Forget
