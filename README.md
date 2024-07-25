@@ -8,9 +8,6 @@ The function _printf writes output to standard output. The function writes under
 ## Requirements
 
 The _printf function was coded on an Ubuntu 22.04.3 LTS machine with gcc version 11.4.0 .
-## Usage
-
-To use the _printf function, assuming the above dependencies have been installed, compile all .c files in the repository and include the header main.h with any main function.
 
 #### Compilation:
 ```
@@ -33,7 +30,6 @@ int main(void)
 ```
 H
 ```
-
 
 #### s :
 `input`
@@ -116,7 +112,7 @@ File: [man_3_printf](https://github.com/ForgetG/holbertonschool-printf/blob/main
 
 
 
-## Authors
+## Author
 
 Guillaume Forget  
 Keiko Bisou
