@@ -99,13 +99,13 @@ Length:13
 File: [man_3_printf](https://github.com/ForgetG/holbertonschool-printf/blob/main/man_3_printf)
 ## Flowchart
 
-![alt text](https://github.com/ForgetG/holbertonschool-printf/blob/keiko/_printf.png?raw=true)  
+![alt text](https://github.com/ForgetG/holbertonschool-printf/blob/main/_printf.png?raw=true)  
 
 
-![alt text](https://github.com/ForgetG/holbertonschool-printf/blob/keiko/printf.png?raw=true)
+![alt text](https://github.com/ForgetG/holbertonschool-printf/blob/main/printf.png?raw=true)
 
 
-![alt text](https://github.com/ForgetG/holbertonschool-printf/blob/keiko/process_specifier.png?raw=true)
+![alt text](https://github.com/ForgetG/holbertonschool-printf/blob/main/process_specifier.png?raw=true)
 
 
 
